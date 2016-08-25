@@ -1,0 +1,51 @@
+//Created by xiangjiayu on 16/8/17.
+
+
+extends layout
+body
+   block content
+      h1 #{title}
+      p.futitle 网页布局（layout）是CSS的一个重点应用。
+      div.info-one
+         div.info-one-div
+            h4 1、传统布局
+            ul.info-ul
+             li 布局的传统解决方案，基于盒状模型
+             li display属性(block/inline-block/inline/table/table-cell/...)
+             li position属性(relative/absolute/fixed/static/...)
+             li float属性(left/right/none/...)
+             li  它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。
+            div.bgeee
+                  span.exam01 Flexbox
+      div.info-two
+         h4 2、Flex布局是什么？
+         ul.info-ul
+            li Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。
+            li 任何一个容器都可以指定为Flex布局。(包括行内元素)
+            li 采用Flex布局的元素，称为Flex容器（flex container），简称"容器"。它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称"项目"。
+            li 容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。
+            li 容器的属性(如下：)
+         div.bgeee
+            ul.info-ul
+               li flex-direction
+               li flex-wrap
+               li flex-flow
+               li justify-content
+               li align-items
+               li align-content
+      div.xinde
+         span.red 注：设为Flex布局以后，子元素的float、clear和vertical-align属性将失效
+      div.info-three
+         h4 3、兼容性
+         h5 3.1 PC
+         div.bgeee
+            //info-two-div
+            img(src='/images/bg2015071003.jpg')
+         h5 3.2 移动端
+         ul.info-ul
+           li 在android平台的uc浏览器和微信浏览器中使用display: flex;会出问题。
+           li 使用display: flex;的时候需要加上display: -webkit-box;
+           li 使用flex: 1;的时候要加上:
+           li 使用align-items: center;的时候需要加上：-webkit-box-align: center;
+           li 使用flex-direction: column;的时候需要加上
+

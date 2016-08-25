@@ -1,0 +1,167 @@
+//Created by xiangjiayu on 16/8/17.
+
+extends layout
+block content
+   h1 #{title}
+   h2 元素位置
+   <!--1-->
+   h3 1.水平位置
+      span justify-content（flex-start | flex-end | center | space-between | space-around）
+      ul.flex-ul
+         li flex-start（默认值）：左对齐
+         li flex-end：右对齐
+         li center： 居中
+         li space-between：两端对齐，项目之间的间隔都相等。
+         li space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+
+   div.shuip
+      div.content-div.justify-flex-start
+         div flex-start
+      div.content-div.justify-center
+         div center
+      div.content-div.justify-flex-end
+         div flex-end
+      div.content-div.justify-space-between
+         div between
+         div between
+         div between
+      div.content-div.justify-space-around
+         div space-around
+         div space-around
+         div space-around
+   <!--2-->
+   h3 2.垂直位置
+      span align-items（flex-start | flex-end | center | baseline | stretch）
+      ul.flex-ul
+         li flex-start：交叉轴的起点对齐。
+         li flex-end：交叉轴的终点对齐。
+         li center：交叉轴的中点对齐。
+         li baseline: 项目的第一行文字的基线对齐。
+         li stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+   div.chuiz
+         div.content-div.alignitems-flex-start
+            div flex-start
+            div flex-start<br/> flex-start
+            div flex-start<br/> flex-start <br/> flex-start
+         div.content-div.alignitems-center
+            div center
+            div center<br/> center
+            div center<br/> center<br/> center
+         div.content-div.alignitems-flex-end
+            div flex-end
+            div flex-end<br/> flex-end
+            div flex-end<br/> flex-end<br/> flex-end
+
+         div.content-div.alignitems-stretch
+            div
+               div.alignitems-center stretch
+            div
+               div.alignitems-center stretch<br/> stretch
+            div
+               div.alignitems-center stretch<br/> stretch<br/> stretch
+         div.content-div.alignitems-baseline
+            div.fz16 baseline
+            div.fz20 baseline
+            div.fz40 baseline
+            span.line
+   <!--3-->
+   h3 3.单个元素的对齐方式
+      span align-self
+      ul.flex-ul
+       li 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性
+   div.content-div.alignself
+      div align
+      div.self align
+      div align
+      div.self align-self
+      div align
+   h2 Flex属性
+   <!--1-->
+   h3 1.主轴方向
+      span flex-direction（row | row-reverse | column | column-reverse）
+      ul.flex-ul
+         li row（默认值）：主轴为水平方向，起点在左端。
+         li row-reverse：主轴为水平方向，起点在右端。
+         li column：主轴为垂直方向，起点在上沿。
+         li column-reverse：主轴为垂直方向，起点在下沿。
+   div.zhuzhou
+      div.content-div.row-content.row
+         div a
+         div b
+         div c
+      div.content-div.row-content.row-reverse
+         div a
+         div b
+         div c
+      div.content-div.row-content.column
+         div a
+         div b
+         div c
+      div.content-div.row-content.column-reverse
+         div a
+         div b
+         div c
+   <!--2-->
+   h3 2.排列占位
+      span flex-wrap(nowrap | wrap | wrap-reverse)
+      ul.flex-ul
+         li 默认情况下，项目都排在一条线（又称"轴线"）上。flex-wrap属性定义，如果一条轴线排不下，如何换行
+   div.warp
+      div.content-div.warp-content.nowrap
+         div a
+         div b
+         div c
+         div d
+      div.content-div.warp-content.wrap
+         div a
+         div b
+         div c
+         div d
+      div.content-div.warp-content.wrap-reverse
+         div a
+         div b
+         div c
+         div d
+   div.xinde
+      span.red 注：flex-flow <br>
+      span.red(style={'margin-left':'35px'}) flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+   <!--3-->
+   h3 3.占位
+      span flex-grow
+      ul.flex-ul
+         li flex属性是flex-grow, flex-shrink 和 flex-basis的简写，flex-grow 是扩展比率，flex-shrink 是收缩比率，flex-basis 伸缩基准值，默认值为0 1 auto。后两个属性可选。
+         li 算法：http://www.heibaipig.com/blog/?p=450
+   div.paizhan
+      div.content-div.flex-grow
+         div.flex-grow1 1
+         div.flex-grow1 1
+         div.flex-grow1 1
+      div.content-div.flex-grow
+         div.flex-grow1 1
+         div.flex-grow2 2
+         div.flex-grow1 1
+
+      div.content-div.flex-grow
+         div.flex-grow1 1
+         div.flex-grow1 1
+         div.flex-grow2 2
+         div.flex-grow1 1
+         div.flex-grow1 1
+   <!--4-->
+   h3 4.排列顺序
+      span order
+      ul.flex-ul
+       li 属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+
+   div.pail
+      div.content-div.order
+         div.order1 1
+         div.order2 2
+         div.order3 3
+         div.order4 4
+         div.order5 5
+   div.xinde
+      span.red 注：在写IOS中的时候需要用驼峰写法：<br/>
+      span.red 如：justify-content ---- justifyContent(ios)
+
+

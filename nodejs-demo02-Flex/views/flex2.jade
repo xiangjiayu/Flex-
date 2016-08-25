@@ -1,0 +1,73 @@
+//Created by xiangjiayu on 16/8/17.
+
+extends layout
+block content
+   h1 #{title}
+   h2 Flex 实际运用-网格布局
+   div.info-four
+      h4 2.1 基本网格布局
+      h5 最简单的网格布局，就是平均分布。在容器里面平均分配空间，但是需要设置项目的自动缩放。
+      div.bgeee
+         ul.buju-ul
+            li 1/2
+            li 1/2
+         ul.buju-ul
+            li 1/3
+            li 1/3
+            li 1/3
+         ul.buju-ul
+            li 1/4
+            li 1/4
+            li 1/4
+            li 1/4
+
+   div.info-four
+      h4 2.2 百分比布局
+      h5 某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间。
+      div.bgeee
+         ul.buju-ul
+            li a
+            li.li-lol3 b
+         ul.buju-ul
+            li.li-lol2 a
+            li b
+            li c
+         ul.buju-ul
+            li.li-lol4 a
+            li b
+            li.li-lol3 c
+   div.info-four
+      h4 2.3 圣杯布局
+      h5 圣杯布局（Holy Grail Layout）指的是一种最常见的网站布局。页面从上到下，分成三个部分：头部（header），躯干（body），尾部（footer）。其中躯干又水平分成三栏，从左到右为：导航、主栏、副栏。
+      div.bgeee
+         div.contaniner
+            header header
+            section
+               main center
+               nav nav
+               slide slide
+            footer footer
+   div.info-four
+      h4 2.4 输入框的布局
+      h5 我们常常需要在输入框的前方添加提示，后方添加按钮。
+      div.bgeee
+         div.input
+            input(placeholder='请输入...')
+            span Button
+         div.input2
+            span icon
+            input(placeholder='请输入...')
+            span Button
+
+   div.info-four
+      h4 2.5 固定底部栏
+      h5 有时，页面内容太少，无法占满一屏的高度，底栏就会抬高到页面的中间。这时可以采用Flex布局，让底栏总是出现在页面的底部。
+      div.bgeee
+         div.contaniner2
+            header header
+            main   center <br>center <br>center <br>center <br>center <br>
+            footer footer
+   div.info-four
+      h4 文档gitbub地址：
+      h5
+         a(href='https://github.com/xiangjiayu/Flex-' target='_blank') https://github.com/xiangjiayu/Flex-

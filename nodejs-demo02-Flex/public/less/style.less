@@ -1,0 +1,105 @@
+@import "flex";
+@import "animate";
+html{
+  font-size:62.5%;
+}
+body{
+  font-size:12px;
+}
+h1{
+  margin:30px 0 10px 0;
+  font-size:4rem;
+}
+p.futitle{
+  justify-content:center;
+  .d-flex();
+  font-size:18px;
+}
+.index{
+  background:url("/images/title.gif") no-repeat center;
+  background-size:100%;
+  height:100vh;overflow:hidden;
+  color:#fff;
+  .d-flex();
+  flex-direction:column;
+  .index-container{
+    background-color:rgba(0,0,0,.5);
+    .animated();.flipInX();padding:10px 0;
+    h1{
+      margin:0;
+    }
+  }
+  .index-main{
+    .justify-space-around();
+    .alignitems-center();
+    flex:1;
+    .main-div{
+      a {
+        .animated();.fadeInUpBig();
+        transition:background 0.5s;
+        border-radius:100%;
+        background-color:rgba(0, 0, 0, .2);
+        width:20rem;
+        height:20rem;
+        font-size:3rem;
+        font-weight:bold;
+        .justify-center();
+        .alignitems-center();
+        color:#fff;
+        text-decoration:none;
+        &:hover{
+          background-color:rgba(0, 0, 0, .4);
+        }
+        &:before{
+          content:'';
+          width:5rem;
+          height:1px;
+          background:#ddd;
+        }
+      }
+      &:nth-child(2n+1){
+        a {
+          background-color:rgba(0, 0, 0, .1);
+          &:hover{
+            background-color:rgba(0, 0, 0, .2);
+          }
+        }
+      }
+    }
+  }
+  .index-bm{
+    .justify-flex-end();
+    p{
+      padding:5px;font-size:1.4rem;
+      .animated();.fadeInRightBig();
+    }
+  }
+}
+//data-time
+.duration(@date:0.2s){
+  animation-duration:@date !important;
+  -webkit-animation-duration:@date !important;
+  -moz-animation-duration:@date !important;
+  -o-animation-duration:@date !important;
+}
+[date-time="0.5s"]{
+  .duration(0.5s);
+}
+[date-time="0.8s"]{
+  .duration(0.8s);
+}
+[date-time="1s"]{
+  .duration(1s);
+}
+[date-time="1.5s"]{
+  .duration(1.5s);
+}
+[date-time="2s"]{
+  .duration(2s);
+}
+[date-time="2.5s"]{
+  .duration(2.5s);
+}
+[date-time="3s"]{
+  .duration(3s);
+}
